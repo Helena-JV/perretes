@@ -146,6 +146,71 @@ header > div {
         .hero div:nth-child(2) {
             display: none;
         }
-        
-
     }
+
+/* SECTION: POR QUÉ ADOPTAR ===================================================== */
+
+.section1 {
+    width: 100vw;
+    min-height: 100dvh;
+    padding-top: 1px;
+    padding-bottom: 12vw;
+}
+
+/*CONTAINER---------------------*/
+.cards-container {
+    display: flex;
+    flex-direction:column;
+    gap: 30px;
+    align-items: center;
+}
+
+@media screen and (min-width: 900px) {
+    .cards-container {
+        flex-direction: row;
+    }
+}
+
+/*CARD---------------------------*/
+@scope (.card) {
+    img {
+        width:100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 9px;
+    }
+
+    .card-text > h3{
+        margin-bottom: 10px
+    }
+
+    max-width: 500px;
+
+    border-radius: 9px;
+    padding: 2cqw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+    gap: 30px;
+
+    padding-bottom: 40px;
+}
+
+/*POSITION---------------------*/
+.cards-container {
+    --rotation-cards: 3deg;
+}
+
+.cards-container .card:first-child, .cards-container .card:last-child {
+    transform: rotate(calc(-1*var(--rotation-cards)));
+}
+
+.cards-container .card:nth-child(2)  {
+    transform: rotate(var(--rotation-cards));
+}
+
+/*ANIMATION---------------------*/
+
