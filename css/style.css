@@ -1,0 +1,151 @@
+
+
+/* GENERAL ===================================================== */
+body {
+    font-family: system-ui, sans-serif;
+    height: 4000px;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: var(--clr-dark);
+    text-wrap: balance;
+}
+
+/* HEADER ===================================================== */
+header {
+    height: clamp(50px, 6vw, 70px); 
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top:30px;
+    z-index: 100;
+}
+
+@supports(animation-timeline: scroll()){
+    header {
+        height: clamp(50px, 8vw, 90px); 
+
+        animation: headerAnimation both;
+        animation-timeline: scroll();
+        animation-range: 0 500px;
+    }
+
+    @keyframes headerAnimation{
+        to {
+            height: clamp(50px, 6vw, 70px); 
+        }
+    }
+}
+
+
+header svg {
+    height: 60%;
+    width: auto;
+}
+
+header > div {
+    display: flex;
+    align-items: center;
+    gap: 5vw;
+}
+
+@media screen and (max-width: 450px) {
+    header > div {
+        display: none;  
+    }
+}
+
+/* HERO ===================================================== */
+
+.hero {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin: 0 auto;
+    padding-top: 5%;
+    height: 100%;
+    align-items: center; 
+}
+
+
+/*BLOQUE DE TEXTO---------------------*/
+    .hero div:first-child {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+        gap: 50px; 
+        z-index: 2;
+    }
+
+    .hero div:first-child button {
+        padding: 20px;
+    }
+
+
+/*PERRETE---------------------*/
+.hero div:nth-child(2) {
+    position: absolute;
+    width: 100%;
+    height: 100%; 
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.hero div:nth-child(2) .perro {
+    position: absolute;
+    right: -5cqw; 
+    bottom: 0;
+    width: 50cqw; 
+    max-width: 800px;
+    container-name: contenedor;
+    container-type: inline-size;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    z-index: 1;
+}
+
+.hero div:nth-child(2) .perro .cuerpo {
+    width: 85cqw; 
+    height: auto;
+    position: relative;
+    bottom: 0;
+}
+
+.hero div:nth-child(2) .perro .cola {
+    position: absolute;
+    width: 60cqw; 
+    height: auto;
+    bottom: -5cqh; 
+    right: 70cqw; 
+    transform-origin: center right;
+    transform: rotate(30deg);
+}
+
+
+
+/*MEDIAQUERYS---------------------*/
+    @media (max-width: 600px) {
+        .hero {
+            grid-template-columns: 1fr; 
+            text-align: center;
+        }
+
+        .hero div:first-child button {
+            align-self: center;
+        }
+
+        .hero div:nth-child(2) {
+            display: none;
+        }
+        
+
+    }

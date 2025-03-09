@@ -1,0 +1,147 @@
+/* VARIABLES===================================================== */
+:root {
+
+    /*COLORES -------------------------------*/
+    --clr-dark: #201E1F;
+
+    --clr-blue-dark: #399694;
+    --clr-blue: color-mix(in srgb, var(--clr-blue-dark) 60%, #ffffff);
+
+   
+    --clr-pink: #EA8170;
+    --clr-pink-light: #FAAA8D;
+
+    --clr-pink-dark: #CE3A00;
+    --clr-brown: color-mix(in srgb, var(--clr-pink-dark) 60%, #737373);
+
+    --clr-cream: #FEEFDD;
+    
+
+    /*MARGENES -------------------------------*/
+    --general-margins: 40px;
+
+
+}
+
+/* COLORES===================================================== */
+
+    /*BACKGROUND -------------------------------*/
+    .bg-blue {
+        background-color: var(--clr-blue);
+    }
+
+    .bg-white {
+        background-color: white;
+    }
+
+    .bg--pink-dark {
+        background-color: var(--clr-pink-dark);
+    }
+
+    /*COLOR ------------------------------------*/
+    .clr-dark {
+        color: var(--clr-dark);
+    }
+
+    .clr-white {
+        color: white;
+    }
+
+/* DROP SHADOW===================================================== */
+    .dropshadow {
+        filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.1));
+    }
+
+
+
+/* FONTS===================================================== */
+
+    /*QUICKSAND ------------------------------------*/
+        .fnt-quicksand-regular {
+            font-family: "Quicksand", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            text-wrap: balance;
+        }
+
+        .fnt-quicksand-bold {
+            font-family: "Quicksand", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 700;
+            text-wrap: balance;
+        }
+
+    /*GORDITAS ------------------------------------*/
+        .fnt-gorditas-bold {
+            font-family: "Gorditas", serif;
+            font-weight: 700;
+            line-height: 1.05;
+        }
+
+
+/* FONT SIZE===================================================== */
+
+    /*HEADERS ------------------------------------*/
+        .fnt-h1 {
+            font-size: clamp(40px, 9vw, 120px);
+        }
+
+        .fnt-h2 {
+            font-size: clamp(35px, 6vw, 80px);
+        }
+
+        .fnt-h3 {
+            font-size: clamp(30px, 4.5vw, 75px);
+        }
+
+        .fnt-h4 {
+            font-size: clamp(25px, 3.4vw, 48px);
+        }
+
+        .fnt-btn {
+            font-size: clamp(10px, 1vw, 20px)
+        }
+        
+    /*PÁRRAFOS ------------------------------------*/
+        .fnt-p-l {
+            font-size: 2rem;
+        }
+
+        .fnt-p {
+            font-size: 1.2rem;
+
+        }
+
+        .fnt-p-s {
+            font-size: 1rem;
+            
+        }
+
+
+/* MARGENES===================================================== */
+
+.margins-page {
+    margin-left: var(--margins-page);
+    margin-right: var(--margins-page);
+}
+
+/* TAMAÑOS===================================================== */
+.size-cover {
+    width: 100%;
+    height: 100dvh;
+}
+
+.size-container {
+    width: clamp(300px,85vw,2048px);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* MARGINS===================================================== */
+.margin-m {
+    margin-top: 5vw;
+}
+
+.margin-s {
+    margin-top: clamp(10px, 2vw, 30px);
+}
