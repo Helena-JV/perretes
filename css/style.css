@@ -62,6 +62,10 @@ header > div {
     }
 }
 
+header button:active {
+    outline: 3px solid var(--clr-blue) !important;
+}
+
 /* HERO ===================================================== */
 
 .hero {

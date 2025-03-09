@@ -1,3 +1,4 @@
+/* BOTÓN ============================================ */
 .refugio-button {
     padding: 10px;
     border-radius: 10px;
@@ -6,4 +7,16 @@
     font-weight: 700;
     line-height: 1.05; 
     width: fit-content;
+
+    transition: transform 0.2s ease-in-out;
 }
+
+    /* HOVER ------------------------ */
+    .refugio-button:hover {
+        transform: scale(1.2) rotate(-5deg);
+    }
+
+    .refugio-button:active {
+        outline: 3px solid white;
+    }
+
