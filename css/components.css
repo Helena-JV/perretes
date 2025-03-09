@@ -1,6 +1,37 @@
+/* TRANSICIONES ENTRE PÁGINAS ========================= */
+@view-transition {
+    navigation: auto;
+}
+
+body {
+    view-transition-name: content;
+}
+
+::view-transition-old(content) {
+    z-index: 1;
+    animation: irseAnimation 1s ease-in-out;
+}
+
+::view-transition-new(content) {
+    z-index: 1;
+    animation: venirAnimation 1s ease-in-out;
+}
+
+
+@keyframes irseAnimation {
+    0%{ opacity: 1;}
+    100%{opacity: 0;}
+}
+
+@keyframes venirAnimation {
+    0%{clip-path: circle(0% at 50% 50%);}
+    100%{clip-path: circle(100% at 50% 50%);}
+}
+
+
 /* BOTÓN ============================================ */
 .refugio-button {
-    padding: 10px;
+    padding: 15px;
     border-radius: 10px;
 
     font-family: "Gorditas", serif;
@@ -13,7 +44,7 @@
 
     /* HOVER ------------------------ */
     .refugio-button:hover {
-        transform: scale(1.2) rotate(-5deg);
+        transform: scale(1.1) rotate(-3deg);
     }
 
     .refugio-button:active {

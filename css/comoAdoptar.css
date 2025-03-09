@@ -1,0 +1,16 @@
+.section-adoptar {
+    overflow: hidden;
+    position: relative;
+}
+
+.section-adoptar::before {
+    content: "";
+    position: absolute;
+    height: 120%;
+    aspect-ratio: 1/1; 
+    border-radius: 50%;
+    background-color: var(--clr-blue-dark);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}

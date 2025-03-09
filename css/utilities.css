@@ -38,9 +38,19 @@
         background-color: var(--clr-pink-dark);
     }
 
+    .bg-pink {
+        background-color: var(--clr-pink);
+    } 
+
     .bg-cream {
         background-color: var(--clr-cream);
     }
+
+    .bg-dark {
+        background-color: var(--clr-dark);
+
+    }
+
 
     /*COLOR ------------------------------------*/
     .clr-dark {
@@ -92,15 +102,15 @@
 
     /*HEADERS ------------------------------------*/
         .fnt-h1 {
-            font-size: clamp(40px, 9vw, 100px);
+            font-size: clamp(70px, 9vw, 100px);
         }
 
         .fnt-h2 {
-            font-size: clamp(35px, 6vw, 80px);
+            font-size: clamp(45px, 6vw, 80px);
         }
 
         .fnt-h3 {
-            font-size: clamp(30px, 4.5vw, 75px);
+            font-size: clamp(40px, 4.5vw, 75px);
         }
 
         .fnt-h4 {
@@ -143,6 +153,11 @@
 .size-cover {
     width: 100%;
     height: 100dvh;
+    padding-top: 1px; /*Si quito esto se me desborda con el margin*/
+}
+
+.size-100vw {
+    width: 100%;
     padding-top: 1px; /*Si quito esto se me desborda con el margin*/
 }
 
