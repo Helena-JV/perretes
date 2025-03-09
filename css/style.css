@@ -168,6 +168,7 @@ header > div {
 @media screen and (min-width: 900px) {
     .cards-container {
         flex-direction: row;
+        align-items: stretch;
     }
 }
 
@@ -176,7 +177,7 @@ header > div {
     img {
         width:100%;
         height: 200px;
-        object-fit: cover;
+        object-fit: contain;
         border-radius: 9px;
     }
 
@@ -184,6 +185,12 @@ header > div {
         margin-bottom: 10px
     }
 
+    .card-text p {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    width: 100%;
     max-width: 500px;
 
     border-radius: 9px;
@@ -209,7 +216,7 @@ header > div {
 }
 
 .cards-container .card:nth-child(2)  {
-    transform: rotate(var(--rotation-cards));
+    transform: rotate(calc(3*var(--rotation-cards)));
 }
 
 /*ANIMATION---------------------*/
