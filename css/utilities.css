@@ -92,7 +92,7 @@
 
     /*HEADERS ------------------------------------*/
         .fnt-h1 {
-            font-size: clamp(40px, 9vw, 120px);
+            font-size: clamp(40px, 9vw, 100px);
         }
 
         .fnt-h2 {
@@ -113,7 +113,7 @@
         
     /*PÁRRAFOS ------------------------------------*/
         .fnt-p-l {
-            font-size: 2rem;
+            font-size: clamp(1.5rem, 2vw, 2rem);
         }
 
         .fnt-p {
