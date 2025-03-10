@@ -10,7 +10,6 @@ body {
     color: var(--clr-dark);
     text-wrap: balance;
 }
-
 /* HEADER ===================================================== */
 header {
     height: clamp(50px, 6vw, 70px); 
@@ -45,8 +44,13 @@ header {
 
     /*LOGO---------------------*/
 
-    header svg {
-        height: 60%;
+    header > a:first-child {
+        height: clamp(30px, 50%, 80px);
+        width: auto;
+    }
+
+    header a svg:first-child {
+        height: 100%;
         width: auto;
     }
 
@@ -56,10 +60,11 @@ header {
         display: flex;
         align-items: center;
         gap: 5vw;
+        text-wrap: nowrap;
     }
 
-    @media screen and (max-width: 450px) {
-        header > div {
+    @media screen and (max-width: 718px) {
+        header > div > button {
             display: none;  
         }
     }
@@ -166,6 +171,7 @@ header {
         .hero {
             grid-template-columns: 1fr; 
             text-align: center;
+            margin-top: 30px;
         }
 
         .hero div:first-child button {
