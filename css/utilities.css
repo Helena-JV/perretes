@@ -102,7 +102,7 @@
 
     /*HEADERS ------------------------------------*/
         .fnt-h1 {
-            font-size: clamp(50px, 9vw, 100px);
+            font-size: clamp(53px, 9vw, 100px);
         }
 
         .fnt-h2 {
