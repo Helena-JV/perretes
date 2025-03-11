@@ -65,6 +65,14 @@
         color: var(--clr-blue-dark);
     }
 
+    .clr-blue {
+        color: var(--clr-blue);
+    }
+
+    .clr-pink-dark {
+        color: var(--clr-pink-dark);
+    }
+
 /* DROP SHADOW===================================================== */
     .dropshadow {
         filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.1));
