@@ -290,28 +290,27 @@ header {
         }
     }
 
-    /* SCOPE CARD */
-    @scope (.card) {
-        img {
-            width:100%;
-            height: 200px;
-            object-fit: contain;
-            border-radius: 9px;
-        }
-
-        .card-text {
-            padding:clamp(5px,10vw,40px);
-        }
-
-        .card-text > h3{
-            margin-bottom: 10px
-        }
-
-        .card-text p {
-            width: 80%;
-            margin: 0 auto;
-        }
+    /* CARD */
+    .card img {
+        width:100%;
+        height: 200px;
+        object-fit: contain;
+        border-radius: 9px;
     }
+
+    .card .card-text {
+        padding:clamp(5px,10vw,40px);
+    }
+
+    .card .card-text > h3{
+        margin-bottom: 10px
+    }
+
+    .card .card-text p {
+        width: 80%;
+        margin: 0 auto;
+    }
+
 
 /*POSITION---------------------*/
 .cards-container {
@@ -426,4 +425,45 @@ footer p {
     padding-top: 20px;
     padding-bottom: 20px;
     text-align: center;
+}
+
+/*===================================================================================================
+COMO ADOPTAR ========================================================================================= 
+===================================================================================================*/
+
+.body100vh {
+    height: 100dvh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.body100vh main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.body100vh footer {
+    flex-shrink: 0;
+}
+
+.section-adoptar {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.circulobg {
+    position: absolute;
+    height: 120%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: var(--clr-blue-dark);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

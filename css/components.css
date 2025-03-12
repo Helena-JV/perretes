@@ -1,4 +1,5 @@
 /* TRANSICIONES ENTRE PÁGINAS ========================= */
+
 @view-transition {
     navigation: auto;
 }
@@ -17,16 +18,24 @@ body {
     animation: venirAnimation 1s ease-in-out;
 }
 
-
 @keyframes irseAnimation {
-    0%{ opacity: 1;}
-    100%{opacity: 0;}
+    0% { 
+        opacity: 1; 
+    }
+    100% { 
+        opacity: 0; 
+    }
 }
 
 @keyframes venirAnimation {
-    0%{clip-path: circle(0% at 50% 50%);}
-    100%{clip-path: circle(100% at 50% 50%);}
+    0% {
+        clip-path: circle(0% at 50% 50%);
+    }
+    100% {
+        clip-path: circle(100% at 50% 50%);
+    }
 }
+
 
 
 /* BOTÓN ============================================ */
