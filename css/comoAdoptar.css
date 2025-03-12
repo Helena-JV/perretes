@@ -1,12 +1,12 @@
 .body100vh {
-    height: 100dvh; /* Ocupa toda la altura de la ventana */
+    height: 100dvh;
     margin: 0;
     display: flex;
     flex-direction: column;
 }
 
 .body100vh main {
-    flex-grow: 1; /* Permite que <main> ocupe todo el espacio disponible */
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
 }
@@ -15,14 +15,13 @@
     flex-shrink: 0;
 }
 
-/* Ajuste de sección */
 .section-adoptar {
     overflow: hidden;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-grow: 1; /* Permite que la sección se expanda dentro del main */
+    flex-grow: 1;
 }
 
 .circulobg {
@@ -36,6 +35,7 @@
     transform: translate(-50%, -50%);
 }
 
+/*CONTAINER=======================================================*/
 .como-adoptar-container {
     margin-top: clamp(80px, 6vw, 70px);
     display: flex;
@@ -44,6 +44,9 @@
     align-items: center;
     text-align: center;
     max-width: 900px;
+}
+.dots-and-mask-container {
+    position: relative;
 }
 .como-adoptar-mask {
     width: 100%;
@@ -54,30 +57,57 @@
     height: 55dvh;
     scroll-snap-type: y mandatory;
 }
-.como-adoptar-container article {
-    scroll-snap-align: start;
-    padding: clamp(5px, 9vw, 200px) clamp(5px, 7vw, 100px);
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
+    /* DOTS---------------------------------- */
+    .dots {
+        z-index: 3;
+        position: absolute;
+        right: clamp(10px, 2vw, 20px);
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 10px;
+        pointer-events: none;
+    }
+    .dot {
+        display: inline-block;
+        width: clamp(7px, 0.7vw, 12px);
+        height: clamp(7px, 0.7vw, 12px);
+        border-radius: 50%;
+        background-color: color-mix(in srgb, var(--clr-blue-dark) 30%, white);
+    }
 
-.como-adoptar-container article .number {
-    font-size: clamp(40px, 4.5vw, 75px);
-}
+    .active {
+        background-color: var(--clr-pink-dark);
+        outline: 1px solid white;
+    }
 
-.como-adoptar-container article .txt-container p {
-    margin-top: clamp(30px, 5vw, 100px);
-}
+    /* ARTICLE------------------------------- */
+    .como-adoptar-container article {
+        scroll-snap-align: start;
+        padding: clamp(5px, 9vw, 200px) clamp(5px, 7vw, 100px);
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-bottom: 1px solid var(--clr-blue-dark);
+    }
 
-.como-adoptar-container img {
-    justify-self: center;
-    margin-top: 10px;
-}
+    .como-adoptar-container article .number {
+        font-size: clamp(40px, 4.5vw, 75px);
+    }
+
+    .como-adoptar-container article .txt-container {
+        margin-right: clamp(10px, 2vw, 20px);
+    }
+    .como-adoptar-container article .txt-container p {
+        margin-top: clamp(30px, 5vw, 100px);
+    }
 
 
+/*MEDIA QUERYS=======================================================*/
 @media screen and (min-width: 600px) {
     .como-adoptar-mask {
         height: 40vh;
@@ -86,7 +116,6 @@
     .como-adoptar-container article {
         flex-direction: row;
         text-align: left;
-        border-bottom: 1px solid var(--clr-blue);
     }
 
     .como-adoptar-container article .number {
@@ -101,16 +130,18 @@
         margin-top: 20px;
     }
 
-    .scroll-advertation {
-        position: absolute;
-        right: 30px;
-        bottom: 30px;
-    }
-
     .como-adoptar-container article button {
         transform: scale(1.5);
     }
-    
+
+    /* HOVER ------------------------ */
+    .como-adoptar-container .refugio-button:hover {
+        transform: scale(1.9) rotate(-3deg);
+    }
+
+    .como-adoptar-container .refugio-button:active {
+        outline: 3px solid white;
+    }
 }
 
 
